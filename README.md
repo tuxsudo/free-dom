@@ -9,7 +9,7 @@ A composition of small micro-libraries for interacting with the DOM. Modules are
 
 ## qsa
 
-A small shortcut to using `querySelectorAll()` which also coerces list to an Array.
+A small shortcut to using `querySelectorAll()` which also coerces NodeList to an Array.
 
 	import qsa from 'qsa';
 
@@ -17,17 +17,29 @@ A small shortcut to using `querySelectorAll()` which also coerces list to an Arr
 
 
 
-## css-class-acts
+## class-acts
+
+Lamda function factories for adding, removing, & toggling a CSS class on HTML Elements.
 
 	import qsa from 'qsa';
-	import addClass from 'css-class-acts/add';
+	import classActs from 'class-acts';
 
-	qsa('p').addClass('my-class');
+	qsa('p')
+		.map( classActs.add('my-class') )
+		.map( classActs.toggle('your-class') )
+		.map( classActs.remove('its-class') );
 
 
 ## dom-emit
 
+Emit custom events in the DOM. For modern browsers and IE9+. Polyfill included.
 
+	import qsa from 'qsa';
+	import emit from 'dom-emit';
+
+	emit('my-event-name');
+	emit.from(document.body, 'another-custom-event', {data: true});
+	qsa('p').map( emit.map('custom-event') );
 
 
 

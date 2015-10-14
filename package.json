@@ -1,6 +1,6 @@
 {
   "name": "free-dom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of small micro-libraries for interacting with the DOM",
   "main": "index.js",
   "jsnext:main": "index.js",
