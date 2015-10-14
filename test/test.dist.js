@@ -1,0 +1,1 @@
+"use strict";var qsa=function qsa(selector){var element=arguments.length<=1||arguments[1]===undefined?document:arguments[1];return[].slice.call(element.querySelectorAll(selector))};function addClass(className){return function(elm){elm.classList.add(className);return elm}}window.qsa=qsa;window.addClass=addClass;

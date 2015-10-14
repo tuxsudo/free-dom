@@ -1,0 +1,35 @@
+{
+  "name": "free-dom",
+  "version": "1.0.0",
+  "description": "A collection of small micro-libraries for interacting with the DOM",
+  "main": "index.js",
+  "jsnext:main": "index.js",
+  "scripts": {
+    "build": "rollup test/test.js | babel | uglifyjs > test/test.dist.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuxsudo/free-dom.git"
+  },
+  "keywords": [
+    "dom",
+    "vanillajs",
+    "without",
+    "jquery"
+  ],
+  "author": "Jared Anderson <@tuxsudo>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuxsudo/free-dom/issues"
+  },
+  "homepage": "https://github.com/tuxsudo/free-dom#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "rollup": "^0.19.1"
+  },
+  "dependencies": {
+    "css-class-acts": "^1.0.0",
+    "dom-emit": "^1.0.1",
+    "qsa": "^1.0.0"
+  }
+}
