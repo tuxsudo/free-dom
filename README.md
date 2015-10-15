@@ -1,10 +1,6 @@
 # Free-DOM
 
-A composition of small micro-libraries for interacting with the DOM. Modules are designed and encouraged to be used a-la-carte, but a window global can be used if it's preferred.
-
-
-	qsa('p')
-		.map( addClass('my-class') );
+A composition of small micro-libraries for interacting with the DOM.
 
 
 ## qsa
@@ -28,6 +24,17 @@ Lamda function factories for adding, removing, & toggling a CSS class on HTML El
 		.map( classActs.add('my-class') )
 		.map( classActs.toggle('your-class') )
 		.map( classActs.remove('its-class') );
+
+
+## attr-boy
+
+Lamds function factories for adding, removing, & toggling data attributes.
+
+	import qsa from 'qsa';
+	import toggleAttr from 'attr-boy/toggle';
+
+	qsa('p')
+		.map(toggleAttr('data-is-on'));
 
 
 ## dom-emit

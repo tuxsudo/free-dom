@@ -5,7 +5,7 @@
   "main": "index.js",
   "jsnext:main": "index.js",
   "scripts": {
-    "build": "rollup test/test.js | babel | uglifyjs > test/test.dist.js"
+    "build": "rollup -f iife test/test.js | babel | uglifyjs > test/test.dist.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,8 @@
     "babel": "^5.8.23",
     "rollup": "^0.19.1"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "attr-boy": "^1.0.1",
     "class-acts": "^1.0.2",
     "dom-emit": "^1.0.1",
     "qsa": "^1.0.0"
